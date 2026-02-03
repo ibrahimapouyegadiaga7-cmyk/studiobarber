@@ -1,0 +1,327 @@
+/* Reset et Bases */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Navigation */
+header {
+    padding: 20px 50px;
+    background: rgba(0,0,0,0.8);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li a {
+    color: #ccc;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #fff;
+}
+
+.btn-nav {
+    background: #d4a373; /* Couleur dorée/bois */
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+/* --- Section Tarifs --- */
+.tarifs {
+    padding: 100px 50px;
+    background-color: #1a1a1a;
+    text-align: center;
+}
+
+.tarifs h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.tarifs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tarif-card {
+    background: #262626;
+    padding: 40px 20px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    transition: border-color 0.3s;
+}
+
+.tarif-card:hover {
+    border-color: #d4a373;
+}
+
+.tarif-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 1.8rem;
+    color: #d4a373;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.tarif-card p {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-bottom: 25px;
+}
+
+.btn-tarif {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #d4a373;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+
+.btn-tarif:hover {
+    background: #d4a373;
+}
+
+/* --- Section Avis Clients --- */
+.avis {
+    padding: 100px 50px;
+    background-color: #111;
+    text-align: center;
+}
+
+.avis h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.avis-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.avis-card {
+    background: #1a1a1a;
+    padding: 40px;
+    border-radius: 15px;
+    position: relative;
+}
+
+.stars {
+    color: #d4a373;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.quote {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #eee;
+    margin-bottom: 20px;
+}
+
+.client-name {
+    font-weight: bold;
+    color: #d4a373;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.btn-main {
+    background: #d4a373;
+    color: #fff;
+    padding: 15px 40px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+/* --- Section Galerie --- */
+.galerie {
+    padding: 100px 50px;
+    background-color: #111;
+    text-align: center;
+}
+
+.galerie h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.galerie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-auto-rows: 250px; /* Hauteur de base des lignes */
+    grid-auto-flow: dense; /* Remplit les trous automatiquement */
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.galerie-item {
+    overflow: hidden;
+    border-radius: 8px;
+    position: relative;
+}
+
+.galerie-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    filter: grayscale(20%); /* Effet un peu plus sombre/élégant */
+}
+
+.galerie-item:hover img {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+}
+
+/* Tailles spéciales pour l'effet mosaïque */
+@media (min-width: 768px) {
+    .item-wide {
+        grid-column: span 2;
+    }
+    .item-tall {
+        grid-row: span 2;
+    }
+}
+
+/* Services */
+.services {
+    padding: 100px 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.services h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: #262626;
+    padding: 0 0 20px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.service-card h3 {
+    margin: 20px 0 10px;
+}
+
+.view-more {
+    color: #d4a373;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Reservation Form */
+.reservation {
+    padding: 80px 50px;
+    background: #111;
+    text-align: center;
+}
+
+.reservation form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.reservation input, .reservation select {
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background: #222;
+    color: #fff;
+}
