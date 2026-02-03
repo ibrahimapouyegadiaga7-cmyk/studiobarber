@@ -142,29 +142,7 @@
             </div>
         </div>
     </section>
-    <!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Studio Élégance | Barber Shop Premium</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-</head>
-<body>
-
-    <header>
-        <nav>
-            <div class="logo">Studio Élégance</div>
-            <ul>
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#galerie">Galerie</a></li>
-                <li><a href="#tarifs">Tarifs</a></li>
-                <li><a href="#reservation">Contact</a></li>
-            </ul>
-            <a href="#reservation" class="btn-nav">Réserver</a>
-        </nav>
-    </header>
+    
 
 
     <section id="galerie" class="galerie">
@@ -267,29 +245,67 @@ function afficherAvis(avis) {
     </div>
 </section>
     
+<section id="reservation" class="reservation">
+    <h2>Réserver mon style</h2>
+    <form id="whatsappForm">
+        <input type="text" id="nom_client" placeholder="Nom complet" required>
+        <input type="tel" id="tel_client" placeholder="Ton numéro de téléphone" required>
+        
+        <select id="service_client" required>
+            <option>Choisir un service</option>
+            <option>Coupe Homme avec coloration(Noir)</option>
+            <option>Coupe Homme sans coloration</option>
+        </select>
+        <select>
+            <option>Choisir le style (Taper, Dégradé...)</option>
+            <option>Taper</option>
+            <option>Dégradé</option>
+            <option>Rasé</option>                
+            <option>Boule à zéro</option>
+        </select>
+        <input type="date" id="date_client" required>
+        <input type="time" id="heure_client" required>
 
+        <button type="button" onclick="envoyerVersWhatsApp()" class="btn-main">
+            📲 Envoyer sur WhatsApp
+        </button>
+    </form>
+</section>
+<script>
+function envoyerVersWhatsApp() {
+    // 1. Mets ton numéro ici (avec l'indicatif pays, sans le + ni les espaces)
+    // Exemple pour le Sénégal : 221770000000
+    const monNumero = "221769798594"; 
 
-    <section id="reservation" class="reservation">
-        <h2>Réservation</h2>
-        <form>
-            <input type="text" placeholder="Nom complet" required>
-            <input type="tel" placeholder="Téléphone" required>
-            <select>
-                <option>Choisir un service</option>
-                <option>Coupe Homme avec coloration(Noir)</option>
-                <option>Coupe Homme sans coloration</option>
-            </select>
-            <select>
-                <option>Choisir le style (Taper, Burst, Waves...)</option>
-                <option>Taper</option>
-                <option>Dégradé</option>
-                <option>Rasé</option>                
-                <option>Boule à zéro</option>
-            </select>
-            <input type="date">
-            <button type="submit" class="btn-main">Confirmer</button>
-        </form>
-    </section>
+    // 2. On récupère les infos du formulaire
+    const nom = document.getElementById('nom_client').value;
+    const tel = document.getElementById('tel_client').value;
+    const service = document.getElementById('service_client').value;
+    const date = document.getElementById('date_client').value;
+    const heure = document.getElementById('heure_client').value;
 
+    // Vérification si les champs sont remplis
+    if(!nom || !tel || !service || !date || !heure) {
+        alert("S'il te plaît, remplis toutes les informations avant d'envoyer !");
+        return;
+    }
+
+    // 3. On prépare le message bien propre
+    const message = `*NOUVELLE RÉSERVATION - STUDIO ÉLÉGANCE*%0A%0A` +
+                    `👤 *Client :* ${nom}%0A` +
+                    `📞 *Contact :* ${tel}%0A` +
+                    `✂️ *Style :* ${service}%0A` +
+                    `📅 *Date :* ${date}%0A` +
+                    `⏰ *Heure :* ${heure}%0A%0A` +
+                    `Merci de me confirmer la disponibilité !`;
+
+    // 4. On génère le lien WhatsApp
+    const lienWA = `https://wa.me/${monNumero}?text=${message}`;
+
+    // 5. On ouvre WhatsApp
+    window.open(lienWA, '_blank');
+}
+</script>
 </body>
 </html>
+            
