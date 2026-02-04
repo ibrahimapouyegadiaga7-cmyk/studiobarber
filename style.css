@@ -538,25 +538,4 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
-/* Style des badges de programmation */
-.skills {
-    display: flex;
-    gap: 10px;
-    margin-top: 25px;
-}
 
-.skill-badge {
-    background: transparent;
-    border: 1px solid #8b5a2b;
-    color: #8b5a2b;
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.skill-badge:hover {
-    background: #8b5a2b;
-    color: #000;
-}
