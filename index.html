@@ -193,65 +193,71 @@
     </section>
 
     
-    <section id="reservation" class="reservation">
+   <section id="reservation" class="reservation">
     <h2>Prendre Rendez-vous</h2>
     
     <div class="info-domicile">
-        <p>📍 <strong>Service exclusivement à domicile . Je me déplace vers vous pour satisfaire vos besoins.</strong></p>
+        <p>📍 <strong>Service exclusivement à domicile. Je me déplace vers vous pour satisfaire vos besoins.</strong></p>
         <p>Une fois votre demande envoyée, je vous répondrai par message pour confirmer ma disponibilité.</p>
     </div>
 
     <form id="whatsappForm">
-        <input type="text" id="nom_client" placeholder="Votre Nom complet" required>
-         <input type="int" id="tel" placeholder="Numéro de téléphone" required>
-        <input type="text" id="adresse_client" placeholder="Votre Adresse (Quartier, Rue, Batiment, Porte...)" required>
+        <input type="text" id="c_nom" placeholder="Votre Nom complet" required>
+        <input type="tel" id="c_tel" placeholder="Numéro de téléphone" required>
+        <input type="text" id="c_adresse" placeholder="Votre Adresse (Quartier, Rue, Batiment, Porte...)" required>
         
-        <select id="service_client" required>
-            <option>Choisir un service</option>
-            <option>Coupe Homme avec coloration(Noir)</option>
-            <option>Coupe Homme sans coloration</option>
+        <select id="c_service" required>
+            <option value="">Choisir un service</option>
+            <option value="Coupe Homme avec coloration (Noir)">Coupe Homme avec coloration (Noir)</option>
+            <option value="Coupe Homme sans coloration">Coupe Homme sans coloration</option>
         </select>
-        <select>
-            <option>Choisir le style (Taper, Dégradé...)</option>
-            <option>Taper</option>
-            <option>Dégradé</option>
-            <option>Rasé</option>                
-            <option>Boule à zéro</option>
+
+        <select id="c_style" required>
+            <option value="">Choisir le style (Taper, Dégradé...)</option>
+            <option value="Taper">Taper</option>
+            <option value="Dégradé">Dégradé</option>
+            <option value="Rasé">Rasé</option>                
+            <option value="Boule à zéro">Boule à zéro</option>
         </select>
         
         <div class="date-heure">
-            <input type="date" id="date_client" required>
-            <input type="time" id="heure_client" required>
+            <input type="date" id="c_date" required>
+            <input type="time" id="c_heure" required>
         </div>
 
-        <button type="button" onclick="envoyerVersWhatsApp()" class="btn-main">
+        <button type="button" onclick="envoyerDemande()" class="btn-main">
             📲 Envoyer ma demande par WhatsApp
         </button>
     </form>
 </section>
 
-        <script>
+<script>
 function envoyerDemande() {
-    const numWA = "221769798594"; // Mets ton numéro ici entre guillemets
+    const numWA = "221769798594"; 
 
+    // On récupère les valeurs
     const nom = document.getElementById('c_nom').value;
     const tel = document.getElementById('c_tel').value;
     const adresse = document.getElementById('c_adresse').value;
     const service = document.getElementById('c_service').value;
+    const style = document.getElementById('c_style').value; // Ajout du style
     const date = document.getElementById('c_date').value;
     const heure = document.getElementById('c_heure').value;
 
+    // Vérification de sécurité
     if(!nom || !adresse || !service || !date || !heure) {
         alert("Merci de remplir tous les champs !");
         return;
     }
 
+    // Construction du message
     const message = `*DEMANDE DE COIFFURE À DOMICILE*%0A` +
                     `--------------------------------%0A` +
                     `👤 *Client :* ${nom}%0A` +
                     `📞 *Tél :* ${tel}%0A` +
                     `📍 *Adresse :* ${adresse}%0A` +
                     `✂️ *Service :* ${service}%0A` +
+                    `🎨 *Style :* ${style}%0A` +
                     `📅 *Le :* ${date}%0A` +
                     `⏰ *À :* ${heure}%0A%0A` +
                     `_Merci de me confirmer si vous êtes libre._`;
