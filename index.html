@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IPG Élégance | Votre Style</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -71,19 +72,19 @@
 
     <header>
         <nav>
-            <div class="logo">IPG BARBER SHOP</div>
+            <div class="logo">IPG BARBER SHOP </div>
             <ul>
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Galerie</a></li>
-                <li><a href="#">Tarifs</a></li>
+                <li><a href="#hero">Accueil</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#galerie">Modéles</a></li>
+                <li><a href="#tarifs">Tarifs</a></li>
                 
             </ul>
             <a href="#reservation" class="btn-nav">Prendre rendez-vous</a>
         </nav>
     </header>
 
-    <section class="hero">
+    <section id="hero" class="hero">
         <div class="hero-content">
             <h1>L'art de votre style, le secret de notre savoir-faire.</h1>
             <p>L’alchimie entre style et savoir-faire.</p>
@@ -91,59 +92,55 @@
         </div>
     </section>
 
-    <section class="services">
+
+    <section id="me" class="about-section">
+    <div class="about-container">
+        <div class="about-image">
+            <img src="image/ip.jpeg" alt="Ton Nom">:
+        </div>
+
+        <div class="about-text">
+            <h2 class="gold-title">L'Artiste derrière le fauteuil</h2>
+            <h4>Prénom : IBRAHIMA POUYE</h4>
+            <h4>Nom : GADIAGA</h4>
+
+            <p>
+                Passionné par la précision, que ce soit avec une tondeuse ou un clavier. 
+                Expert en coiffure masculine, je cultive également un profil technique 
+                en développement logiciel.
+            </p>
+
+            <div class="skills">
+                <span class="skill-badge">Python</span>
+                <span class="skill-badge">SQL</span>
+                <span class="skill-badge">C++</span>
+                <span class="skill-badge">HTML</span>
+                <span class="skill-badge">CSS</span>
+            </div>
+        </div>
+    </div>
+</section>
+    <section id="services" class="services">
         <h2>Nos Services</h2>
         <div class="services-grid">
             <div class="service-card">
-                <img src="https://via.placeholder.com/300x200" alt="Coupe Homme">
-                <h3>Coupe Homme</h3>
+                <img src="image/geo.jpg.jpeg" alt="Signature Unique">
+                <h3>Signature Unique</h3>
                 <p>Des coupes modernes et classiques pour sublimer votre style.</p>
-                <a href="#" class="view-more">Voir plus →</a>
+                
             </div>
-            <div class="service-card">
-                <img src="https://via.placeholder.com/300x200" alt="Coupe Femme">
-                <h3>Coupe Femme</h3>
+            <div  class="service-card">
+                <img src="image/ch.jpeg" alt="Style Preminium">
+                <h3>Style Preminium</h3>
                 <p>Des tendances actuelles aux coupes intemporelles.</p>
-                <a href="#" class="view-more">Voir plus →</a>
             </div>
             <div class="service-card">
-                <img src="https://via.placeholder.com/300x200" alt="Coloration">
-                <h3>Coloration</h3>
+                <img src="image/nd.jpeg" alt="Impact Immédiat">
+                <h3>Impact Immédiat</h3>
                 <p>Des couleurs personnalisées pour révéler votre éclat.</p>
-                <a href="#" class="view-more">Voir plus →</a>
             </div>
         </div>
     </section>
-    <section class="tarifs">
-        <h2>Nos Tarifs</h2>
-        <div class="tarifs-grid">
-            <div class="tarif-card">
-                <h3>Coupe Homme</h3>
-                <p class="price">5 000 FCFA</p>
-                <p>Coupe classique ou moderne avec shampooing et coiffage.</p>
-                <a href="#reservation" class="btn-tarif">Réserver ma coupe</a>
-            </div>
-            <div class="tarif-card">
-                <h3>Coupe Femme</h3>
-                <p class="price">8 000 FCFA</p>
-                <p>Coupe sur mesure avec shampooing, soin et brushing.</p>
-                <a href="#reservation" class="btn-tarif">Réserver ma coupe</a>
-            </div>
-            <div class="tarif-card">
-                <h3>Coloration</h3>
-                <p class="price">10 000 FCFA</p>
-                <p>Coloration complète avec mèches ou balayage selon vos envies.</p>
-                <a href="#reservation" class="btn-tarif">Réserver ma coloration</a>
-            </div>
-            <div class="tarif-card">
-                <h3>Soin Profond</h3>
-                <p class="price">12 000 FCFA</p>
-                <p>Traitement intensif pour revitaliser et protéger vos cheveux.</p>
-                <a href="#reservation" class="btn-tarif">Réserver mon soin</a>
-            </div>
-        </div>
-    </section>
-    
 
 
     <section id="galerie" class="galerie">
@@ -153,6 +150,12 @@
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS921LSXqZGQ0D_LiYYiMhGrzK_gsJfutixuA&s" alt="Taper">
                 <div class="overlay">Taper</div>
             </div>
+
+            <div class="galerie-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkDrMBxe-9Rw9nFdzDioHA7MdGwYTHFZSqcg&s" alt="Taper">
+                <div class="overlay">Taper</div>
+            </div>
+
             <div class="galerie-item">
                 <img src="data:image/jpeg;base64,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" alt="Rasé">
                 <div class="overlay">Rasé</div>
@@ -181,13 +184,43 @@
         <div class="tarifs-grid">
             <div class="tarif-card">
                 <h3>Taper </h3>
-                <p class="price">8 000 FCFA</p>
-                <p>Contours précis & dégradé progressif.</p>
+                <p class="price">13 Euro(€)</p>
+                <p>
+                C'est la coupe parfaite pour celui qui 
+                veut "changer sans trop changer".
+                Elle donne un coup de frais instantané au 
+                visage grâce aux contours tracés à la tondeuse 
+                ou au rasoir.
+                </p>
             </div>
             <div class="tarif-card">
-                <h3>Barbe & Soin</h3>
-                <p class="price">5 000 FCFA</p>
-                <p>Taille au millimètre & serviette chaude.</p>
+                <h3>Dégradé</h3>
+                <p class="price">11 Euro(€)</p>
+                <p>
+                Le dégradé est idéal pour ceux qui 
+                veulent une coupe qui reste "propre" longtemps. 
+                Combiné avec des contours tracés au rasoir,
+                c'est l'assurance d'un look soigné et professionnel.
+                </p>
+            </div>
+             <div class="tarif-card">
+                <h3>Rasé</h3>
+                <p class="price">10 Euro(€)</p>
+                <p>
+                C'est la coupe minimaliste par excellence. 
+                Courte et uniforme, elle met en valeur la 
+                structure du visage pour un look ultra-masculin
+                et sans entretien.
+                </p>
+            </div>
+             <div class="tarif-card">
+                <h3>Boule à zéro</h3>
+                <p class="price">10 Euro(€)</p>
+                <p>
+                C’est le choix de la confiance et du caractère.
+                Un crâne entièrement rasé pour un look impeccable,
+                net et résolument moderne.
+                </p>
             </div>
         </div>
     </section>
@@ -266,23 +299,29 @@ function envoyerDemande() {
 }
 </script>
 
+
+
 <footer class="pro-footer">
     <div class="footer-container">
         <div class="footer-col">
             <h3 class="footer-logo">IPG<span>✂️Barber✂️</span>Shop</h3>
             <p>Expert en coiffure à domicile. Le style d'une star, sans bouger de chez vous.</p>
-            <div class="social-links">
-                <a href="https://www.tiktok.com/@officiel_ipg_?is_from_webapp=1&sender_device=pc"><i class="fab fa-tiktok"></i></a>
+            <div class="footer-col">
+                <h4>Contact & Zone</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Nord-Pas-De-Calais(France)</p>
+                <p><i class="fas fa-phone"></i> 07 59 10 50 02</p>
             </div>
+            <div class="social-links">
+              <a href="https://instagram.com/ibrahima7g" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                
+                <a href="https://tiktok.com/@officiel_ipg_" target="_blank">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+                </div>
         </div>
 
-        
-
-        <div class="footer-col">
-            <h4>Contact & Zone</h4>
-            <p><i class="fas fa-map-marker-alt"></i> Nord-Pas-De-Calais(France)</p>
-            <p><i class="fas fa-phone"></i> 07 59 10 50 02</p>
-        </div>
     </div>
 
     <div class="footer-bottom">

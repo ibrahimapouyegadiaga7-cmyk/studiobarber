@@ -19,6 +19,7 @@ header {
     position: fixed;
     width: 100%;
     z-index: 1000;
+    
 }
 
 nav {
@@ -27,12 +28,16 @@ nav {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
+    
 }
+
 
 .logo {
     font-family: 'Playfair Display', serif;
     font-size: 1.5rem;
     font-weight: bold;
+    
+   
 }
 
 nav ul {
@@ -45,6 +50,12 @@ nav ul li a {
     text-decoration: none;
     margin: 0 15px;
     transition: 0.3s;
+    font-family: 'Playfair Display', serif;
+    display: grid;
+    color: #ccc;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background-color: #d4a373;
+    background: linear-gradient(transparent,#d4a373 )
 }
 
 nav ul li a:hover {
@@ -52,7 +63,7 @@ nav ul li a:hover {
 }
 
 .btn-nav {
-    background: #d4a373; /* Couleur dorée/bois */
+    background: #d49f73; /* Couleur dorée/bois */
     color: #fff;
     padding: 10px 20px;
     text-decoration: none;
@@ -122,51 +133,6 @@ nav ul li a:hover {
 
 .btn-tarif:hover {
     background: #d4a373;
-}
-
-/* --- Section Avis Clients --- */
-.avis {
-    padding: 100px 50px;
-    background-color: #111;
-    text-align: center;
-}
-
-.avis h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
-    margin-bottom: 50px;
-}
-
-.avis-container {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.avis-card {
-    background: #1a1a1a;
-    padding: 40px;
-    border-radius: 15px;
-    position: relative;
-}
-
-.stars {
-    color: #d4a373;
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-}
-
-.quote {
-    font-style: italic;
-    font-size: 1.1rem;
-    color: #eee;
-    margin-bottom: 20px;
-}
-
-.client-name {
-    font-weight: bold;
-    color: #d4a373;
-    text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
 /* Hero Section */
@@ -430,7 +396,7 @@ nav ul li a:hover {
 }
 
 .footer-col p {
-    color: #bbb;
+    color: #bbbbbb;
     line-height: 1.6;
     margin-bottom: 10px;
 }
@@ -450,9 +416,30 @@ nav ul li a:hover {
     transition: 0.3s;
 }
 
+
+
+
+
+.footer-bottom{
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background-color: #d4a373;
+    background: linear-gradient(transparent,#d4a373 )
+}
+
+.footer-bottom p {
+    font-family: 'Franklin Gothic Medium',
+     'Arial Narrow', Arial, sans-serif;
+    color: #000;
+}
+
+
+
+
+
 .footer-col ul li a:hover {
-    color: #d4a373;
+    color: #d47373;
     padding-left: 5px;
+    
 }
 
 .social-links {
@@ -497,4 +484,79 @@ nav ul li a:hover {
     .social-links {
         justify-content: center;
     }
+}
+.social-links a:hover .fa-tiktok {
+    color: #ff0050; /* La couleur rose emblématique de TikTok */
+}
+.social-links a:hover .fa-instagram {
+    color: #ff0050; /* La couleur rose emblématique de TikTok */
+}
+ 
+
+
+
+
+
+
+
+.about-section {
+    padding: 80px 10%;
+    background: #0a0a0a; /* Noir profond */
+    color: #fff;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.about-image img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border: 3px solid #8b5a2b; /* Marron doré */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.gold-title {
+    color: #8b5a2b; /* Ton marron/doré */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.about-text h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Style des badges de programmation */
+.skills {
+    display: flex;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.skill-badge {
+    background: transparent;
+    border: 1px solid #8b5a2b;
+    color: #8b5a2b;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.skill-badge:hover {
+    background: #8b5a2b;
+    color: #000;
 }
